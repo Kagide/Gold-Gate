@@ -1,0 +1,10 @@
+PASS built HTML: /
+PASS built HTML: /about
+PASS built HTML: /services
+PASS built HTML: /services/business-start-up
+PASS built HTML: /services/accounting-business-support
+PASS built HTML: /services/taxation-vat
+PASS built HTML: /services/consultancy-systems
+PASS built HTML: /services/it-marketing
+PASS built HTML: /privacy
+9 static page HTML checks passed. Contact is dynamic and covered by the browser audit and metadata helper tests.

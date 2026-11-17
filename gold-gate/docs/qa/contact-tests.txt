@@ -1,0 +1,21 @@
+
+> gold-gate@1.1.0 test
+> node --import tsx scripts/contact.test.ts
+
+Cross-origin rejected: PASS (403)
+Missing origin rejected: PASS (403)
+Wrong content type rejected: PASS (415)
+Malformed JSON rejected: PASS (400)
+Oversize request rejected: PASS (413)
+Invalid email rejected: PASS (400)
+Missing consent rejected: PASS (400)
+Unknown service rejected: PASS (400)
+Honeypot rejected: PASS (400)
+Unconfigured delivery is never success: PASS (503)
+Sixth attempt rate limited: PASS (429)
+Mock provider acceptance returns receipt: PASS (200)
+Mock provider error is not success: PASS (502)
+Missing provider receipt is not success: PASS (502)
+Mock network failure is not success: PASS (503)
+Distributed limiter failure closes submission: PASS (503)
+16 checks passed. No email or external request was sent.

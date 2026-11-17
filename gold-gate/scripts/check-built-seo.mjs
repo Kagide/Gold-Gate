@@ -1,0 +1,9 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const origin=process.env.SEO_CHECK_ORIGIN;
+const routes=['/','/about','/services','/services/business-start-up','/services/accounting-business-support','/services/taxation-vat','/services/consultancy-systems','/services/it-marketing','/privacy'];
+const titles=new Set();let count=0;
+for(const route of routes){const path='.next/server/app/'+(route==='/'?'index':route.slice(1))+'.html';const html=fs.readFileSync(path,'utf8');const title=html.match(/<title>(.*?)<\/title>/s)?.[1];assert(title?.includes('Gold Gate'),'Branded title missing: '+route);assert(!titles.has(title),'Duplicate title: '+route);titles.add(title);assert(/<meta name="description" content="[^"]{40,}"/.test(html),'Description missing: '+route);assert.equal((html.match(/<h1(?:\s|>)/g)||[]).length,1,'H1 count: '+route);assert(html.includes('width=device-width, initial-scale=1'),'Viewport missing: '+route);
+if(origin){assert(html.includes('rel="canonical" href="'+origin+route.replace(/^\/$/,'')+'"'),'Canonical missing: '+route);assert(!/<meta name="robots" content="[^"]*noindex/.test(html),'Production blocked: '+route);const schemas=[...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(m=>JSON.parse(m[1]));assert(schemas.some(s=>s['@graph']?.some(n=>n['@type']==='ProfessionalService')),'Company schema missing: '+route);if(route.startsWith('/services/'))assert(schemas.some(s=>s['@graph']?.some(n=>n['@type']==='Service')),'Service schema missing: '+route)}else{assert(/<meta name="robots" content="[^"]*noindex/.test(html),'Preview index protection missing: '+route)}
+count++;console.log('PASS built HTML: '+route)}
+console.log(count+' static page HTML checks passed. Contact is dynamic and covered by the browser audit and metadata helper tests.');

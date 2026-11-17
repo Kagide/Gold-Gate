@@ -1,0 +1,46 @@
+
+> gold-gate@1.1.0 test:seo
+> node --import tsx scripts/seo.test.ts && node --import tsx scripts/seo.test.ts --preview
+
+PASS: Sitemap has only approved production routes or stays empty in preview
+PASS: Robots matches the deployment mode
+PASS: business-start-up: canonical URL
+PASS: business-start-up: page-specific sharing metadata
+PASS: business-start-up: structured service and breadcrumb
+PASS: accounting-business-support: canonical URL
+PASS: accounting-business-support: page-specific sharing metadata
+PASS: accounting-business-support: structured service and breadcrumb
+PASS: taxation-vat: canonical URL
+PASS: taxation-vat: page-specific sharing metadata
+PASS: taxation-vat: structured service and breadcrumb
+PASS: consultancy-systems: canonical URL
+PASS: consultancy-systems: page-specific sharing metadata
+PASS: consultancy-systems: structured service and breadcrumb
+PASS: it-marketing: canonical URL
+PASS: it-marketing: page-specific sharing metadata
+PASS: it-marketing: structured service and breadcrumb
+PASS: Every service has distinct search copy
+PASS: Company schema uses confirmed address and supplied phone
+PASS: JSON-LD serialization escapes HTML
+20 SEO checks passed in production configuration mode. No website was published.
+PASS: Sitemap has only approved production routes or stays empty in preview
+PASS: Robots matches the deployment mode
+PASS: business-start-up: canonical URL
+PASS: business-start-up: page-specific sharing metadata
+PASS: business-start-up: structured service and breadcrumb
+PASS: accounting-business-support: canonical URL
+PASS: accounting-business-support: page-specific sharing metadata
+PASS: accounting-business-support: structured service and breadcrumb
+PASS: taxation-vat: canonical URL
+PASS: taxation-vat: page-specific sharing metadata
+PASS: taxation-vat: structured service and breadcrumb
+PASS: consultancy-systems: canonical URL
+PASS: consultancy-systems: page-specific sharing metadata
+PASS: consultancy-systems: structured service and breadcrumb
+PASS: it-marketing: canonical URL
+PASS: it-marketing: page-specific sharing metadata
+PASS: it-marketing: structured service and breadcrumb
+PASS: Every service has distinct search copy
+PASS: Company schema uses confirmed address and supplied phone
+PASS: JSON-LD serialization escapes HTML
+20 SEO checks passed in preview mode. No website was published.

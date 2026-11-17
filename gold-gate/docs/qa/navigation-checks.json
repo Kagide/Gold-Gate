@@ -1,0 +1,77 @@
+{
+  "desktop": [
+    {
+      "title": "Business Start-Up",
+      "url": "http://127.0.0.1:4173/services/business-start-up",
+      "menuClosed": true
+    },
+    {
+      "title": "Accounting & Business Support",
+      "url": "http://127.0.0.1:4173/services/accounting-business-support",
+      "menuClosed": true
+    },
+    {
+      "title": "Taxation & VAT",
+      "url": "http://127.0.0.1:4173/services/taxation-vat",
+      "menuClosed": true
+    },
+    {
+      "title": "Consultancy & Systems Advice",
+      "url": "http://127.0.0.1:4173/services/consultancy-systems",
+      "menuClosed": true
+    },
+    {
+      "title": "IT & Marketing Support",
+      "url": "http://127.0.0.1:4173/services/it-marketing",
+      "menuClosed": true
+    }
+  ],
+  "mobile": [
+    {
+      "title": "Business Start-Up",
+      "menuClosed": true
+    },
+    {
+      "title": "Accounting & Business Support",
+      "menuClosed": true
+    },
+    {
+      "title": "Taxation & VAT",
+      "menuClosed": true
+    },
+    {
+      "title": "Consultancy & Systems Advice",
+      "menuClosed": true
+    },
+    {
+      "title": "IT & Marketing Support",
+      "menuClosed": true
+    }
+  ],
+  "inquiries": [
+    {
+      "service": "business-start-up",
+      "selected": "business-start-up"
+    },
+    {
+      "service": "accounting-business-support",
+      "selected": "accounting-business-support"
+    },
+    {
+      "service": "taxation-vat",
+      "selected": "taxation-vat"
+    },
+    {
+      "service": "consultancy-systems",
+      "selected": "consultancy-systems"
+    },
+    {
+      "service": "it-marketing",
+      "selected": "it-marketing"
+    }
+  ],
+  "keyboard": {
+    "tabIntoMenu": true,
+    "escapeRestoresToggle": true
+  }
+}

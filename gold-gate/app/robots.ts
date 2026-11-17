@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next';import {baseUrl} from '@/lib/content';export default function robots():MetadataRoute.Robots{return {rules:baseUrl?{userAgent:'*',allow:'/',disallow:'/api/'}:{userAgent:'*',disallow:'/'},...(baseUrl?{sitemap:baseUrl+'/sitemap.xml'}:{})}}

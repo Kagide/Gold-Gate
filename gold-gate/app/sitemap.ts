@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next';import {baseUrl,services} from '@/lib/content';export default function sitemap():MetadataRoute.Sitemap{return baseUrl?['','/about','/services',...services.map(s=>'/services/'+s.slug),'/contact','/privacy'].map(path=>({url:baseUrl+path})):[]}
